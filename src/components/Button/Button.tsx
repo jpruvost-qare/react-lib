@@ -1,5 +1,4 @@
 import React from "react";
-import { Button as JeanJacque } from '@chakra-ui/react'
 
 export interface ButtonProps {
   label: string;
@@ -7,7 +6,7 @@ export interface ButtonProps {
 
 const Button = (props: ButtonProps) => {
     return (
-        <JeanJacque colorScheme='blue'>Button</JeanJacque>
+        <button>Button</button>
     )
 };
 
