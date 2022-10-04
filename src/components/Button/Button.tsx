@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 export interface ButtonProps {
   label: string;
 }
 
 const Button = (props: ButtonProps) => {
-    return (
-        <button>Button</button>
-    )
+  const handleClick = useCallback(() => {
+    alert('toto');
+  }, [])
+
+  return <button onClick={handleClick}>Button</button>;
 };
 
 export default Button;
