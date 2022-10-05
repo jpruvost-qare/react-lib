@@ -1,15 +1,17 @@
-import React, { useCallback } from "react";
+import React from "react";
+import { Button as JeanJacque } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'
 
 export interface ButtonProps {
   label: string;
 }
 
 const Button = (props: ButtonProps) => {
-  const handleClick = useCallback(() => {
-    alert('toto');
-  }, [])
-
-  return <button onClick={handleClick}>Button</button>;
+  return (
+    <ChakraProvider>
+      <JeanJacque colorScheme='blue'>Button</JeanJacque>
+    </ChakraProvider>
+  )
 };
 
 export default Button;
